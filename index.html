@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日曜夕方のあのじゃんけんタイム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <div class="emoji-banner">☀️ 🍲 🏠 🌈</div>
+            <p class="sub-title">今週最後の一勝負！</p>
+            <h1>日曜夕方の<br>あのじゃんけんタイム</h1>
+            <p id="message">さあ、今週の運勢は？<br>心の準備ができたら勝負しよう！</p>
+        </header>
+
+        <div class="score-board">
+            <p>勝ち: <span id="wins">0</span></p>
+            <p>負け: <span id="losses">0</span></p>
+            <p>あいこ: <span id="draws">0</span></p>
+            <p>連勝: <span id="streak">0</span></p>
+        </div>
+
+        <div class="battle-field">
+            <div class="player-zone">
+                <p>あなた</p>
+                <div id="player-hand" class="hand">✊</div>
+            </div>
+            <div class="vs-text">VS</div>
+            <div class="cpu-zone">
+                <p>コンピューター</p>
+                <div id="cpu-hand" class="hand">✊</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn">勝負する！</button>
+            <div id="rps-buttons" class="hidden">
+                <button onclick="playGame('rock')">✊ グー</button>
+                <button onclick="playGame('scissors')">✌️ チョキ</button>
+                <button onclick="playGame('paper')">✋ パー</button>
+            </div>
+            <button id="reset-btn" class="hidden">もう一度遊ぶ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
